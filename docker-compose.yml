@@ -1,0 +1,9 @@
+version: '3'
+services:
+  street-detection-microservice:
+    build: microservice-docker
+    container_name: street_detection_microservice
+    environment:
+      - REST_PORT=${REST_PORT}
+    ports:
+      - ${REST_PORT}:${REST_PORT}
